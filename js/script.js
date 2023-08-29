@@ -24,7 +24,11 @@ const nav = document.querySelector(".nav"),
             {
                 if(navList[j].querySelector("a").classList.contains("active"))
                 {
-                   allSection[j].classList.add("back-section");
+                    const navLink = navList[j].querySelector("a");
+                    if (navLink) {
+                        navLink.classList.remove("active");
+                    }
+                //    allSection[j].classList.add("back-section");
                 }
                 navList[j].querySelector("a").classList.remove("active");
             }
